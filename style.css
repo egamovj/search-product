@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+  padding: 1.5rem;
+}
+
+.container {
+  max-width: 28rem;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0.75em;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.search-container {
+  padding: 1rem;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+#searchInput:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.product-list {
+  border-top: 1px solid #f3f4f6;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.product-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.product-list::-webkit-scrollbar-thumb {
+  background: #2563eb; /* Scrollning rangi */
+  border-radius: 3px; /* Yumaloqlik */
+}
+
+.product-list::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8; /* Hoverda scroll rangi */
+}
+
+.product-list::-webkit-scrollbar-track {
+  background: #f3f4f6; /* Track (scroll chizig'i) rangi */
+  border-radius: 4px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.15s;
+}
+.product-item:hover {
+  background-color: #f9fafb;
+  cursor: pointer;
+}
+
+.product-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.product-details {
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.product-name {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.product-price {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.no-results {
+  padding: 1rem;
+  text-align: center;
+  color: #6b7280;
+}
